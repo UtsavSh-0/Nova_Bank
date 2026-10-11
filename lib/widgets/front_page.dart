@@ -19,14 +19,28 @@ class _Bankstate extends State<Bank> {
           IconButton(onPressed: () {}, icon: const Icon(Icons.support_agent)),
         ],
       ),
-      body: Container(
-        width: 400,
+      body: SingleChildScrollView(
+       child:Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+         width: 400,
         height: 180,
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
         margin: const EdgeInsets.symmetric(horizontal: 44),
         decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 2, 27, 48),
-          border: Border.all(color: Colors.black, width: 2),
+          gradient: LinearGradient(
+            colors: [
+              Color.fromRGBO(2, 6, 23, 1.0),
+              Color.fromRGBO(30, 58, 138, 1.0),
+            ],
+            begin: Alignment.bottomLeft,
+            end: Alignment.topRight,
+          ),
+          border: Border.all(
+            color: const Color.fromARGB(255, 251, 204, 204),
+            width: 2,
+          ),
           borderRadius: BorderRadius.circular(20),
         ),
         child: const Column(
@@ -55,6 +69,8 @@ class _Bankstate extends State<Bank> {
           ],
         ),
       ),
+   
     );
+      
   }
 }
