@@ -29,6 +29,29 @@ class _LoginScreen extends State<Login> {
           IconButton(onPressed: () {}, icon: const Icon(Icons.person_2)),
         ],
       ),
+      body: SingleChildScrollView(
+        child:const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Welcome Back ',
+              style:TextStyle(
+                color:Colors.black,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              'Enter your credentials to securely access your NovaBank premier account',
+              style:TextStyle(
+                color:Color.fromARGB(108, 0, 0, 0),
+                fontSize: 14,
+              ),
+            ),
+          ],
+          
+        )
+      )
     );
   }
 }
