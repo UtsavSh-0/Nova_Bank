@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nova_bank/widgets/log_in.dart';
 
 class Bank extends StatefulWidget {
   const Bank({super.key});
@@ -115,7 +116,12 @@ class _BankState extends State<Bank> {
                   vertical: 10,
                 ),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Login()),
+                    );
+                  },
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.black,
                     backgroundColor: Colors.amberAccent,
